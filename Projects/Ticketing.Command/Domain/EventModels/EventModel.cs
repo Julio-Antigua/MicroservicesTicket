@@ -14,7 +14,7 @@ public class EventModel : Document
     public required string AggregateIdentifier { get; set; }
 
     [BsonElement("aggregateType")]
-    public string AggregateName { get; set; } = string.Empty;
+    public string AggregateType { get; set; } = string.Empty;
 
     [BsonElement("version")]
     public int Version { get; set; }
