@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using System.Linq.Expressions;
 using Ticketing.Command.Application.Models;
 using Ticketing.Command.Domain.Abstracts;
 using Ticketing.Command.Domain.Common;
@@ -60,5 +61,12 @@ namespace Ticketing.Command.Infrastructure.Repositories
             IClientSessionHandle clientSessionHandle,
             CancellationToken cancellationToken
         ) => clientSessionHandle.AbortTransactionAsync();
+
+        public async Task<IEnumerable<TDocument>> FilterByAsync(Expression<Func<TDocument, bool>> filterExpression, CancellationToken cancellationToken)
+        {
+            var result = await _collection.FindAsync(filterExpression,null,cancellationToken);
+            var resultList = await result.ToListAsync();
+            return resultList.Any() ? resultList : Enumerable.Empty<TDocument>();
+        }
     }
 }

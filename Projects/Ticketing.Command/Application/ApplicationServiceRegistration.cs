@@ -17,6 +17,7 @@ namespace Ticketing.Command.Application
             IConfiguration configuration)
         {
             services.Configure<MongoSettings>(configuration.GetSection(nameof(MongoSettings)));
+            services.Configure<KafkaSettings>(configuration.GetSection(nameof(KafkaSettings)));
             services.AddMediatR(cfg =>
             {
                 cfg.RegisterServicesFromAssembly(typeof(ApplicationServiceRegistration).Assembly);
