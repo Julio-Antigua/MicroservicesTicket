@@ -10,7 +10,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-    "username":"Juan Perez",
-    "typeError":"ErrorSystem",
-    "detailError":"la tienda estaba cerrar"
+    "username":"juan.ramos@gmail.com",
+    "typeError": 2,
+    "detailError":"el servidor smtp esta off"
 }

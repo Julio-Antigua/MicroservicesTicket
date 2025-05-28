@@ -1,4 +1,5 @@
 ﻿using Common.Core.Events;
+using Common.Core.Producers;
 using MongoDB.Bson.Serialization;
 using MongoDB.Driver;
 using Ticketing.Command.Application.Aggregates;
@@ -21,6 +22,7 @@ namespace Ticketing.Command.Infrastructure
 
             //Mantiene la mista instacia u objeto en todo el ciclo de vida
             services.AddScoped(typeof(IMongoRepository<>), typeof(MongoRepository<>));
+            services.AddScoped<IEventProducer,TicketEventProducer>();
 
             //En cada instancia o componente class que consuma el IEventRepository se genere ua nueva instancia de este servicio
             services.AddTransient<IEventModelRepository, EventModelRepository>();
