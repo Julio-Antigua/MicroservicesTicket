@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{7F7787
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Core", "Common\Common.Core\Common.Core.csproj", "{DB23EDBB-A329-4C55-A1FC-A0B152FC8D9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ticketing.Query", "Projects\Ticketing.Query\Ticketing.Query.csproj", "{A2E128EC-7390-492C-AD9A-42929B5C9458}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{DB23EDBB-A329-4C55-A1FC-A0B152FC8D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB23EDBB-A329-4C55-A1FC-A0B152FC8D9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB23EDBB-A329-4C55-A1FC-A0B152FC8D9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E128EC-7390-492C-AD9A-42929B5C9458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E128EC-7390-492C-AD9A-42929B5C9458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E128EC-7390-492C-AD9A-42929B5C9458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E128EC-7390-492C-AD9A-42929B5C9458}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,5 +38,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BBEFF2BC-7BCA-4CDB-B098-5D3DF35A4A6D} = {274D3DAF-D792-4066-8780-48BEA121EF9A}
 		{DB23EDBB-A329-4C55-A1FC-A0B152FC8D9D} = {7F778731-5DB8-4F09-BEA7-20AE9FFCE8BB}
+		{A2E128EC-7390-492C-AD9A-42929B5C9458} = {274D3DAF-D792-4066-8780-48BEA121EF9A}
 	EndGlobalSection
 EndGlobal
